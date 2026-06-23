@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Academy · Learn & Grow</title>
+    <title>Elite Academy · Skill Enhancement Platform</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
@@ -58,13 +58,15 @@
         }
         .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 20px;
             font-weight: 500;
             color: #4b5563;
+            align-items: center;
+            flex-wrap: wrap;
         }
         .nav-links a {
             transition: color 0.2s;
-            font-size: 16px;
+            font-size: 15px;
         }
         .nav-links a:hover {
             color: #6366f1;
@@ -80,10 +82,28 @@
             cursor: pointer;
             transition: all 0.25s ease;
             box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+            display: inline-block;
         }
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(99, 102, 241, 0.45);
+        }
+        .btn-nareshit {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+            display: inline-block;
+        }
+        .btn-nareshit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45);
         }
         .btn-outline {
             background: transparent;
@@ -113,7 +133,7 @@
             text-align: center;
         }
         .hero h1 {
-            font-size: 56px;
+            font-size: 48px;
             font-weight: 800;
             line-height: 1.15;
             letter-spacing: -1.5px;
@@ -147,14 +167,14 @@
         }
         .course-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 28px;
             margin-bottom: 20px;
         }
         .course-card {
             background: #fff;
             border-radius: 28px;
-            padding: 32px 24px 28px;
+            padding: 28px 24px 24px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
             transition: all 0.3s ease;
             border: 1px solid rgba(0, 0, 0, 0.02);
@@ -167,18 +187,29 @@
             box-shadow: 0 20px 50px rgba(99, 102, 241, 0.10);
         }
         .course-icon {
-            font-size: 38px;
+            font-size: 32px;
             color: #6366f1;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
         .course-card h3 {
             font-size: 20px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+        }
+        .course-card .course-tag {
+            font-size: 12px;
+            font-weight: 600;
+            color: #6366f1;
+            background: rgba(99, 102, 241, 0.1);
+            padding: 2px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            align-self: flex-start;
         }
         .course-card p {
             color: #6b7280;
-            font-size: 15px;
+            font-size: 14px;
             margin-bottom: 16px;
             flex-grow: 1;
         }
@@ -186,86 +217,45 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 14px;
+            font-size: 13px;
             color: #9ca3af;
             border-top: 1px solid #f3f4f6;
             padding-top: 16px;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
+        }
+        .course-meta .btn-group {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .btn-details, .btn-video, .btn-pdf {
+            border: none;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            color: white;
         }
         .btn-details {
             background: #6366f1;
-            color: white;
-            border: none;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s;
         }
         .btn-details:hover {
             background: #4f46e5;
-            transform: scale(1.05);
         }
-        .btn-pdf {
+        .btn-video {
             background: #ef4444;
-            color: white;
-            border: none;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s;
         }
-        .btn-pdf:hover {
+        .btn-video:hover {
             background: #dc2626;
         }
-        .tutorial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
+        .btn-pdf {
+            background: #16a34a;
         }
-        .tutorial-card {
-            background: white;
-            border-radius: 24px;
-            padding: 24px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
-            border: 1px solid #f1f3f8;
-            text-align: center;
-            transition: 0.3s;
-        }
-        .tutorial-card:hover {
-            border-color: #6366f1;
-        }
-        .tutorial-card i {
-            font-size: 40px;
-            color: #6366f1;
-            margin-bottom: 12px;
-        }
-        .tutorial-card h4 {
-            font-size: 18px;
-            margin-bottom: 6px;
-        }
-        .tutorial-card p {
-            color: #6b7280;
-            font-size: 14px;
-        }
-        .tutorial-card .btn-watch {
-            display: inline-block;
-            margin-top: 12px;
-            background: #1a1a2e;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.2s;
-        }
-        .tutorial-card .btn-watch:hover {
-            background: #6366f1;
+        .btn-pdf:hover {
+            background: #15803d;
         }
         .modal {
             display: none;
@@ -283,7 +273,7 @@
             background: white;
             max-width: 500px;
             width: 90%;
-            padding: 40px;
+            padding: 32px;
             border-radius: 32px;
             box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
             position: relative;
@@ -295,8 +285,8 @@
         }
         .modal-close {
             position: absolute;
-            top: 16px;
-            right: 20px;
+            top: 12px;
+            right: 18px;
             font-size: 28px;
             cursor: pointer;
             color: #9ca3af;
@@ -304,24 +294,25 @@
             border: none;
         }
         .modal-close:hover { color: #1a1a2e; }
-        .modal h2 { font-size: 26px; margin-bottom: 16px; }
-        .modal ul { list-style: none; padding: 0; margin: 16px 0; }
+        .modal h2 { font-size: 24px; margin-bottom: 12px; }
+        .modal ul { list-style: none; padding: 0; margin: 12px 0; }
         .modal ul li {
-            padding: 8px 0;
+            padding: 6px 0;
             border-bottom: 1px solid #f3f4f6;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 14px;
         }
-        .modal ul li i { color: #6366f1; width: 20px; }
+        .modal ul li i { color: #6366f1; width: 18px; }
         .modal .btn-access {
             background: linear-gradient(135deg, #6366f1, #8b5cf6);
             color: white;
             border: none;
-            padding: 14px 30px;
+            padding: 12px 20px;
             border-radius: 40px;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 15px;
             width: 100%;
             cursor: pointer;
             transition: 0.2s;
@@ -359,10 +350,11 @@
             }
             .nav-links.open { display: flex; }
             .menu-toggle { display: block; }
-            .hero h1 { font-size: 36px; }
+            .hero h1 { font-size: 32px; }
             .hero p { font-size: 17px; }
             .section-title { font-size: 28px; }
             .modal-content { padding: 24px; }
+            .course-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -375,8 +367,11 @@
             <div class="nav-links" id="navLinks">
                 <a href="#">Home</a>
                 <a href="#courses">Courses</a>
-                <a href="#tutorials">Tutorials</a>
                 <a href="#resources">Resources</a>
+                <!-- NEW: Visit NareshIT Official Website Button -->
+                <a href="https://nareshit.com/" target="_blank" class="btn-nareshit">
+                    <i class="fas fa-external-link-alt"></i> 🏫 Visit NareshIT
+                </a>
             </div>
             <div class="nav-actions">
                 <a href="#" class="btn-outline">Log In</a>
@@ -386,143 +381,180 @@
         </div>
     </nav>
 
-    <!-- ===== HERO ===== -->
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero">
         <div class="container">
-            <h1>Master Skills with <br><span class="highlight">Expert Training</span></h1>
-            <p>Access video tutorials, downloadable PDFs, and course details with just one click. Start learning today!</p>
+            <h1>Master <span class="highlight">Cutting-Edge Skills</span><br>Start Your New Career</h1>
+            <p>Explore the most popular technical and non-technical courses with detailed syllabi, video tutorials, and PDF materials. Go from beginner to pro.</p>
             <a href="#courses" class="btn-primary" style="padding:14px 44px; font-size:17px;">
                 <i class="fas fa-play" style="margin-right:8px;"></i> Explore Courses
             </a>
         </div>
     </section>
 
-    <!-- ===== COURSES ===== -->
+    <!-- ===== COURSES SECTION ===== -->
     <div class="container" id="courses">
-        <h2 class="section-title">🔥 Our Training Courses</h2>
-        <p class="section-sub">Click "Details" to see syllabus. Click "PDF" to download dummy PDF.</p>
+        <h2 class="section-title">🔥 Trending Courses</h2>
+        <p class="section-sub">Technical & Non-Technical domains. Click buttons to view syllabus, videos, and materials.</p>
 
         <div class="course-grid">
-            <!-- Course 1 -->
+            <!-- 1. Python Full-Stack -->
             <div class="course-card">
                 <div class="course-icon"><i class="fab fa-python"></i></div>
+                <span class="course-tag">Technical · Full-Stack</span>
                 <h3>Python Full-Stack</h3>
-                <p>From basics to building real-world web apps with Django.</p>
+                <p>From syntax basics to Django projects — build your first commercial-grade application.</p>
                 <div class="course-meta">
                     <span><i class="far fa-clock"></i> 42 Lessons</span>
-                    <span>
-                        <button class="btn-details" onclick="openModal('python')"><i class="fas fa-info-circle"></i> Details</button>
-                        <button class="btn-pdf" onclick="downloadPDF()"><i class="fas fa-file-pdf"></i> PDF</button>
+                    <span class="btn-group">
+                        <button class="btn-details" onclick="openModal('python')"><i class="fas fa-list-ul"></i> Syllabus</button>
+                        <button class="btn-video" onclick="window.open('https://www.youtube.com/watch?v=rfscVS0vtbw', '_blank')"><i class="fab fa-youtube"></i> Video</button>
+                        <button class="btn-pdf" onclick="window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', '_blank')"><i class="fas fa-file-pdf"></i> PDF</button>
                     </span>
                 </div>
             </div>
-            <!-- Course 2 -->
+
+            <!-- 2. React Frontend -->
             <div class="course-card">
-                <div class="course-icon"><i class="fas fa-code"></i></div>
-                <h3>Frontend Architect</h3>
-                <p>React + TypeScript + Next.js for modern UI development.</p>
+                <div class="course-icon"><i class="fab fa-react"></i></div>
+                <span class="course-tag">Technical · Frontend</span>
+                <h3>React Frontend Architecture</h3>
+                <p>Master React core concepts, Hooks, state management, and build modern UIs.</p>
                 <div class="course-meta">
                     <span><i class="far fa-clock"></i> 38 Lessons</span>
-                    <span>
-                        <button class="btn-details" onclick="openModal('frontend')"><i class="fas fa-info-circle"></i> Details</button>
-                        <button class="btn-pdf" onclick="downloadPDF()"><i class="fas fa-file-pdf"></i> PDF</button>
+                    <span class="btn-group">
+                        <button class="btn-details" onclick="openModal('react')"><i class="fas fa-list-ul"></i> Syllabus</button>
+                        <button class="btn-video" onclick="window.open('https://www.youtube.com/watch?v=qz0aGYrrlhU', '_blank')"><i class="fab fa-youtube"></i> Video</button>
+                        <button class="btn-pdf" onclick="window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', '_blank')"><i class="fas fa-file-pdf"></i> PDF</button>
                     </span>
                 </div>
             </div>
-            <!-- Course 3 -->
+
+            <!-- 3. Data Science -->
             <div class="course-card">
-                <div class="course-icon"><i class="fas fa-database"></i></div>
+                <div class="course-icon"><i class="fas fa-chart-bar"></i></div>
+                <span class="course-tag">Technical · Data</span>
                 <h3>Data Science in Action</h3>
-                <p>Pandas, visualization, and machine learning from scratch.</p>
+                <p>Pandas, visualization, and machine learning — drive decisions with data.</p>
                 <div class="course-meta">
                     <span><i class="far fa-clock"></i> 50 Lessons</span>
-                    <span>
-                        <button class="btn-details" onclick="openModal('datascience')"><i class="fas fa-info-circle"></i> Details</button>
-                        <button class="btn-pdf" onclick="downloadPDF()"><i class="fas fa-file-pdf"></i> PDF</button>
+                    <span class="btn-group">
+                        <button class="btn-details" onclick="openModal('datascience')"><i class="fas fa-list-ul"></i> Syllabus</button>
+                        <button class="btn-video" onclick="window.open('https://www.youtube.com/watch?v=ua-CiDNNj30', '_blank')"><i class="fab fa-youtube"></i> Video</button>
+                        <button class="btn-pdf" onclick="window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', '_blank')"><i class="fas fa-file-pdf"></i> PDF</button>
                     </span>
                 </div>
             </div>
-            <!-- Course 4 -->
+
+            <!-- 4. AWS Cloud -->
             <div class="course-card">
                 <div class="course-icon"><i class="fas fa-cloud"></i></div>
-                <h3>Cloud Architecture</h3>
-                <p>AWS + Docker + Kubernetes for modern DevOps.</p>
+                <span class="course-tag">Technical · Cloud</span>
+                <h3>AWS Cloud Architecture</h3>
+                <p>From EC2, S3 to VPC — master core cloud services and architecture design.</p>
                 <div class="course-meta">
                     <span><i class="far fa-clock"></i> 36 Lessons</span>
-                    <span>
-                        <button class="btn-details" onclick="openModal('cloud')"><i class="fas fa-info-circle"></i> Details</button>
-                        <button class="btn-pdf" onclick="downloadPDF()"><i class="fas fa-file-pdf"></i> PDF</button>
+                    <span class="btn-group">
+                        <button class="btn-details" onclick="openModal('aws')"><i class="fas fa-list-ul"></i> Syllabus</button>
+                        <button class="btn-video" onclick="window.open('https://www.youtube.com/watch?v=RGOj5yH7evk', '_blank')"><i class="fab fa-youtube"></i> Video</button>
+                        <button class="btn-pdf" onclick="window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', '_blank')"><i class="fas fa-file-pdf"></i> PDF</button>
+                    </span>
+                </div>
+            </div>
+
+            <!-- 5. Digital Marketing (Non-Technical) -->
+            <div class="course-card">
+                <div class="course-icon"><i class="fas fa-bullhorn"></i></div>
+                <span class="course-tag">Non-Technical · Marketing</span>
+                <h3>Digital Marketing</h3>
+                <p>Master SEO, SEM, social media marketing, and AI-powered marketing tools.</p>
+                <div class="course-meta">
+                    <span><i class="far fa-clock"></i> 30 Lessons</span>
+                    <span class="btn-group">
+                        <button class="btn-details" onclick="openModal('digitalmarketing')"><i class="fas fa-list-ul"></i> Syllabus</button>
+                        <button class="btn-video" onclick="window.open('https://www.youtube.com/watch?v=qz0aGYrrlhU', '_blank')"><i class="fab fa-youtube"></i> Video</button>
+                        <button class="btn-pdf" onclick="window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', '_blank')"><i class="fas fa-file-pdf"></i> PDF</button>
+                    </span>
+                </div>
+            </div>
+
+            <!-- 6. Data Analytics (Non-Technical) -->
+            <div class="course-card">
+                <div class="course-icon"><i class="fas fa-database"></i></div>
+                <span class="course-tag">Non-Technical · Analytics</span>
+                <h3>Data Analytics</h3>
+                <p>Use Excel, SQL, Power BI, and AI/ML for business data analysis.</p>
+                <div class="course-meta">
+                    <span><i class="far fa-clock"></i> 40 Lessons</span>
+                    <span class="btn-group">
+                        <button class="btn-details" onclick="openModal('dataanalytics')"><i class="fas fa-list-ul"></i> Syllabus</button>
+                        <button class="btn-video" onclick="window.open('https://www.youtube.com/watch?v=ua-CiDNNj30', '_blank')"><i class="fab fa-youtube"></i> Video</button>
+                        <button class="btn-pdf" onclick="window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', '_blank')"><i class="fas fa-file-pdf"></i> PDF</button>
+                    </span>
+                </div>
+            </div>
+
+            <!-- 7. Cyber Security (Non-Technical) -->
+            <div class="course-card">
+                <div class="course-icon"><i class="fas fa-shield-alt"></i></div>
+                <span class="course-tag">Non-Technical · Security</span>
+                <h3>Cyber Security & Ethical Hacking</h3>
+                <p>Learn security basics, penetration testing, and AI/ML-driven security.</p>
+                <div class="course-meta">
+                    <span><i class="far fa-clock"></i> 45 Lessons</span>
+                    <span class="btn-group">
+                        <button class="btn-details" onclick="openModal('cybersecurity')"><i class="fas fa-list-ul"></i> Syllabus</button>
+                        <button class="btn-video" onclick="window.open('https://www.youtube.com/watch?v=qz0aGYrrlhU', '_blank')"><i class="fab fa-youtube"></i> Video</button>
+                        <button class="btn-pdf" onclick="window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', '_blank')"><i class="fas fa-file-pdf"></i> PDF</button>
+                    </span>
+                </div>
+            </div>
+
+            <!-- 8. Generative AI (Non-Technical) -->
+            <div class="course-card">
+                <div class="course-icon"><i class="fas fa-robot"></i></div>
+                <span class="course-tag">Non-Technical · AI</span>
+                <h3>Generative AI & Agentic AI</h3>
+                <p>Explore Gen AI and Agentic AI principles, applications, and Python implementation.</p>
+                <div class="course-meta">
+                    <span><i class="far fa-clock"></i> 35 Lessons</span>
+                    <span class="btn-group">
+                        <button class="btn-details" onclick="openModal('genai')"><i class="fas fa-list-ul"></i> Syllabus</button>
+                        <button class="btn-video" onclick="window.open('https://www.youtube.com/watch?v=rfscVS0vtbw', '_blank')"><i class="fab fa-youtube"></i> Video</button>
+                        <button class="btn-pdf" onclick="window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', '_blank')"><i class="fas fa-file-pdf"></i> PDF</button>
                     </span>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ===== TUTORIALS with REAL YouTube links ===== -->
-    <div class="container" id="tutorials">
-        <h2 class="section-title">📺 Free Video Tutorials</h2>
-        <p class="section-sub">Click "Watch Now" to open real YouTube videos.</p>
-
-        <div class="tutorial-grid">
-            <div class="tutorial-card">
-                <i class="fab fa-youtube"></i>
-                <h4>Python for Beginners</h4>
-                <p>Learn variables, loops, and functions.</p>
-                <!-- REAL YouTube link added here -->
-                <a href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank" class="btn-watch">
-                    <i class="fas fa-play"></i> Watch Now
-                </a>
-            </div>
-            <div class="tutorial-card">
-                <i class="fab fa-youtube"></i>
-                <h4>HTML & CSS Crash</h4>
-                <p>Build your first webpage layout.</p>
-                <!-- REAL YouTube link added here -->
-                <a href="https://www.youtube.com/watch?v=qz0aGYrrlhU" target="_blank" class="btn-watch">
-                    <i class="fas fa-play"></i> Watch Now
-                </a>
-            </div>
-            <div class="tutorial-card">
-                <i class="fab fa-youtube"></i>
-                <h4>Git & GitHub Basics</h4>
-                <p>Understand version control.</p>
-                <!-- REAL YouTube link added here -->
-                <a href="https://www.youtube.com/watch?v=RGOj5yH7evk" target="_blank" class="btn-watch">
-                    <i class="fas fa-play"></i> Watch Now
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== RESOURCES with REAL PDF links ===== -->
+    <!-- ===== RESOURCES SECTION ===== -->
     <div class="container" id="resources">
-        <h2 class="section-title">📚 Training Resources (PDFs)</h2>
-        <p class="section-sub">Click any button to open a dummy PDF sample.</p>
-
+        <h2 class="section-title">📚 Learning Resources</h2>
+        <p class="section-sub">Click the buttons below to access more learning materials.</p>
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 20px;">
-            <!-- REAL dummy PDF link added here -->
             <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" class="btn-primary" style="padding:12px 30px;">
                 <i class="fas fa-file-pdf"></i> Python Syllabus
             </a>
             <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" class="btn-primary" style="padding:12px 30px; background: linear-gradient(135deg, #ef4444, #dc2626);">
-                <i class="fas fa-file-pdf"></i> Frontend Syllabus
+                <i class="fas fa-file-pdf"></i> React Guide
             </a>
             <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" class="btn-primary" style="padding:12px 30px; background: linear-gradient(135deg, #16a34a, #15803d);">
-                <i class="fas fa-file-pdf"></i> Data Science Guide
+                <i class="fas fa-file-pdf"></i> Data Science Handbook
             </a>
             <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" class="btn-primary" style="padding:12px 30px; background: linear-gradient(135deg, #2563eb, #1d4ed8);">
-                <i class="fas fa-file-pdf"></i> Cloud Guide
+                <i class="fas fa-file-pdf"></i> AWS White Paper
             </a>
         </div>
     </div>
 
-    <!-- ===== MODAL (Popup) ===== -->
+    <!-- ===== MODAL (Course Syllabus Popup) ===== -->
     <div class="modal" id="courseModal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">✕</button>
-            <h2 id="modalTitle">Course Details</h2>
+            <h2 id="modalTitle">Course Syllabus</h2>
             <div id="modalBody"><p>Loading...</p></div>
-            <button class="btn-access" onclick="alert('🚀 Access Granted! You will receive login details via email.')">
+            <button class="btn-access" onclick="alert('🚀 Thank you for your interest! We will send you detailed materials via email.')">
                 <i class="fas fa-key"></i> Get Full Access Now
             </button>
         </div>
@@ -533,16 +565,17 @@
         <div class="container">
             <div class="footer-links">
                 <a href="#">About Us</a>
+                <a href="https://nareshit.com/" target="_blank">Partner Institute: NareshIT</a>
                 <a href="#">Help Center</a>
                 <a href="#">Privacy Policy</a>
-                <a href="#">Contact</a>
+                <a href="#">Contact Us</a>
             </div>
             <p>© 2026 Elite Academy · Learn, Practice, Succeed.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu
+        // Mobile Menu Toggle
         const toggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
         toggle.addEventListener('click', () => {
@@ -557,55 +590,122 @@
             const title = document.getElementById('modalTitle');
             const body = document.getElementById('modalBody');
 
-            if (course === 'python') {
-                title.innerText = '🐍 Python Full-Stack';
-                body.innerHTML = `
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Python Syntax & Basics</li>
-                        <li><i class="fas fa-check-circle"></i> Django Framework</li>
-                        <li><i class="fas fa-check-circle"></i> REST API Development</li>
-                        <li><i class="fas fa-check-circle"></i> Deployment on Cloud</li>
-                    </ul>
-                    <p><strong>Prerequisites:</strong> None. Beginner friendly.</p>
-                    <p><strong>Duration:</strong> 6 Weeks</p>
-                `;
-            } else if (course === 'frontend') {
-                title.innerText = '⚛️ Frontend Architect';
-                body.innerHTML = `
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> HTML, CSS, JavaScript</li>
-                        <li><i class="fas fa-check-circle"></i> React & Hooks</li>
-                        <li><i class="fas fa-check-circle"></i> TypeScript Basics</li>
-                        <li><i class="fas fa-check-circle"></i> Next.js & Deployment</li>
-                    </ul>
-                    <p><strong>Prerequisites:</strong> Basic HTML knowledge.</p>
-                    <p><strong>Duration:</strong> 5 Weeks</p>
-                `;
-            } else if (course === 'datascience') {
-                title.innerText = '📊 Data Science in Action';
-                body.innerHTML = `
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Python for Data</li>
-                        <li><i class="fas fa-check-circle"></i> Pandas & NumPy</li>
-                        <li><i class="fas fa-check-circle"></i> Data Visualization</li>
-                        <li><i class="fas fa-check-circle"></i> Machine Learning Basics</li>
-                    </ul>
-                    <p><strong>Prerequisites:</strong> Basic Python.</p>
-                    <p><strong>Duration:</strong> 8 Weeks</p>
-                `;
-            } else if (course === 'cloud') {
-                title.innerText = '☁️ Cloud Architecture';
-                body.innerHTML = `
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> AWS Core Services</li>
-                        <li><i class="fas fa-check-circle"></i> Docker Containers</li>
-                        <li><i class="fas fa-check-circle"></i> Kubernetes Orchestration</li>
-                        <li><i class="fas fa-check-circle"></i> CI/CD Pipelines</li>
-                    </ul>
-                    <p><strong>Prerequisites:</strong> Basic Linux knowledge.</p>
-                    <p><strong>Duration:</strong> 6 Weeks</p>
-                `;
+            const syllabi = {
+                python: {
+                    title: '🐍 Python Full-Stack',
+                    content: `
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Python Syntax & Data Structures</li>
+                            <li><i class="fas fa-check-circle"></i> Object-Oriented Programming (OOP)</li>
+                            <li><i class="fas fa-check-circle"></i> Django Framework & REST API</li>
+                            <li><i class="fas fa-check-circle"></i> Frontend Integration & Deployment</li>
+                        </ul>
+                        <p><strong>Prerequisites:</strong> None. Beginner friendly.</p>
+                        <p><strong>Duration:</strong> 6 Weeks</p>
+                    `
+                },
+                react: {
+                    title: '⚛️ React Frontend Architecture',
+                    content: `
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> JavaScript Core Concepts</li>
+                            <li><i class="fas fa-check-circle"></i> React Components, Props & State</li>
+                            <li><i class="fas fa-check-circle"></i> Hooks & Side Effects</li>
+                            <li><i class="fas fa-check-circle"></i> Routing & API Integration</li>
+                        </ul>
+                        <p><strong>Prerequisites:</strong> Basic HTML/CSS/JS knowledge.</p>
+                        <p><strong>Duration:</strong> 5 Weeks</p>
+                    `
+                },
+                datascience: {
+                    title: '📊 Data Science in Action',
+                    content: `
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Python for Data (Pandas, NumPy)</li>
+                            <li><i class="fas fa-check-circle"></i> Data Visualization (Matplotlib, Seaborn)</li>
+                            <li><i class="fas fa-check-circle"></i> Machine Learning Basics (Scikit-learn)</li>
+                            <li><i class="fas fa-check-circle"></i> Real-World Projects & Model Evaluation</li>
+                        </ul>
+                        <p><strong>Prerequisites:</strong> Basic Python.</p>
+                        <p><strong>Duration:</strong> 8 Weeks</p>
+                    `
+                },
+                aws: {
+                    title: '☁️ AWS Cloud Architecture',
+                    content: `
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Cloud Concepts & AWS Global Architecture</li>
+                            <li><i class="fas fa-check-circle"></i> Core Services: EC2, S3, VPC, IAM</li>
+                            <li><i class="fas fa-check-circle"></i> Databases & Serverless Architecture</li>
+                            <li><i class="fas fa-check-circle"></i> Monitoring, Cost Management & DevOps</li>
+                        </ul>
+                        <p><strong>Prerequisites:</strong> Basic Linux knowledge.</p>
+                        <p><strong>Duration:</strong> 6 Weeks</p>
+                    `
+                },
+                digitalmarketing: {
+                    title: '📢 Digital Marketing',
+                    content: `
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Digital Marketing Strategy & Consumer Behavior</li>
+                            <li><i class="fas fa-check-circle"></i> SEO & SEM (AI Integration)</li>
+                            <li><i class="fas fa-check-circle"></i> Social Media & Content Marketing</li>
+                            <li><i class="fas fa-check-circle"></i> AI Marketing Tools & Data Analytics</li>
+                        </ul>
+                        <p><strong>Prerequisites:</strong> None. Open to all.</p>
+                        <p><strong>Duration:</strong> 4 Weeks</p>
+                    `
+                },
+                dataanalytics: {
+                    title: '📈 Data Analytics',
+                    content: `
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Advanced Excel & Data Cleaning</li>
+                            <li><i class="fas fa-check-circle"></i> SQL Database Queries</li>
+                            <li><i class="fas fa-check-circle"></i> Power BI Data Visualization</li>
+                            <li><i class="fas fa-check-circle"></i> AI/ML-Driven Business Analysis</li>
+                        </ul>
+                        <p><strong>Prerequisites:</strong> Basic computer skills.</p>
+                        <p><strong>Duration:</strong> 4 Months</p>
+                    `
+                },
+                cybersecurity: {
+                    title: '🛡️ Cyber Security & Ethical Hacking',
+                    content: `
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Security Fundamentals & Threat Modeling</li>
+                            <li><i class="fas fa-check-circle"></i> Penetration Testing Tools & Techniques</li>
+                            <li><i class="fas fa-check-circle"></i> AI/ML Applications in Security</li>
+                            <li><i class="fas fa-check-circle"></i> Compliance & Incident Response</li>
+                        </ul>
+                        <p><strong>Prerequisites:</strong> IT support or security enthusiast.</p>
+                        <p><strong>Duration:</strong> 3 Months</p>
+                    `
+                },
+                genai: {
+                    title: '🤖 Generative AI & Agentic AI',
+                    content: `
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Gen AI Principles & Model Architectures</li>
+                            <li><i class="fas fa-check-circle"></i> Agentic AI Concepts & Use Cases</li>
+                            <li><i class="fas fa-check-circle"></i> Python Implementation & API Calls</li>
+                            <li><i class="fas fa-check-circle"></i> Real-World Projects & Case Studies</li>
+                        </ul>
+                        <p><strong>Prerequisites:</strong> Developer or AI enthusiast.</p>
+                        <p><strong>Duration:</strong> 3 Months</p>
+                    `
+                }
+            };
+
+            const data = syllabi[course];
+            if (data) {
+                title.innerText = data.title;
+                body.innerHTML = data.content;
+            } else {
+                title.innerText = 'Course Syllabus';
+                body.innerHTML = '<p>Content coming soon...</p>';
             }
+
             modal.style.display = 'flex';
         }
 
@@ -615,12 +715,6 @@
         window.onclick = function(event) {
             const modal = document.getElementById('courseModal');
             if (event.target === modal) modal.style.display = 'none';
-        }
-
-        // ----- NEW: PDF function that opens a real dummy PDF -----
-        function downloadPDF() {
-            // This is a real working dummy PDF from the internet!
-            window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', '_blank');
         }
 
         // Smooth scrolling
